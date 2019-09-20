@@ -1,0 +1,60 @@
+<h1 style="text-align: center" class="header">Complete your resume</h1>
+<div class="resume" style="text-align: center" class="container">
+    <form [formGroup] class="container">
+        <p>
+            <mat-form-field>
+                <mat-select placeholder="Programming Language" [formControl]="programmingLanguage" multiple>
+                    <mat-select-trigger>
+                        {{programmingLanguage.value ? programmingLanguage.value[0] : ''}}
+                        <span *ngIf="programmingLanguage.value?.length > 1" class="example-additional-selection">
+                            (+{{programmingLanguage.value.length - 1}} {{programmingLanguage.value?.length === 2 ? 'other' : 'others'}})
+                            </span>
+                    </mat-select-trigger>
+                    <mat-option *ngFor="let language of programmingLanguageList" [value]="language">{{language}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field>
+                <mat-select placeholder="Database System" [formControl]="databaseSystem" multiple>
+                        <mat-select-trigger>
+                            {{databaseSystem.value ? databaseSystem.value[0] : ''}}
+                            <span *ngIf="databaseSystem.value?.length > 1" class="example-additional-selection">
+                                (+{{databaseSystem.value.length - 1}} {{databaseSystem.value?.length === 2 ? 'other' : 'others'}})
+                            </span>
+                        </mat-select-trigger>
+                        <mat-option *ngFor="let dbSystem of databaseSystemList" [value]="dbSystem">{{dbSystem}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field>
+                <mat-select placeholder="Framework" [formControl]="framework" multiple>
+                    <mat-select-trigger>
+                        {{framework.value ? framework.value[0] : ''}}
+                            <span *ngIf="framework.value?.length > 1" class="example-additional-selection">
+                            (+{{framework.value.length - 1}} {{databaseSystem.value?.length === 2 ? 'other' : 'others'}})
+                        </span>
+                    </mat-select-trigger>
+                    <mat-option *ngFor="let framework of frameworkList" [value]="framework">{{framework}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field>
+                <mat-select placeholder="CMS" [formControl]="cms" multiple>
+                    <mat-select-trigger>
+                        {{cms.value ? cms.value[0] : ''}}
+                            <span *ngIf="cms.value?.length > 1" class="example-additional-selection">
+                                (+{{cms.value.length - 1}} {{cms.value?.length === 2 ? 'other' : 'others'}})
+                            </span>
+                        </mat-select-trigger>
+                    <mat-option *ngFor="let cms of cmsList" [value]="cms">{{cms}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </p>
+        <p>
+            <input type="submit" class="submit" value="Submit">
+        </p>
+    </form>
+</div>

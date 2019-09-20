@@ -1,0 +1,21 @@
+.container {
+    background: #ebebeb;
+    padding: 12px;
+}
+
+.header {
+    background: rgb(12, 77, 129);
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.submit {
+  background: rgb(1, 29, 51);
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
